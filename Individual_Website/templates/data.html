@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data | Climate & Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='data.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('data') }}">Data & Visualizations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h1>Temperature Change by Country</h1>
+            <p>Select a country to explore annual temperature changes (1961–2024).</p>
+        </section>
+
+        <!-- Country Selection Form -->
+        <section class="form-section">
+            <form method="POST">
+                <select name="country">
+                    {% for country in countries %}
+                        <option value="{{ country }}" {% if country == selected %}selected{% endif %}>{{ country }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Show">
+            </form>
+        </section>
+
+        <!-- Graph Output -->
+        <section class="graph-section">
+            <div class="graph-container">
+                {{ graph | safe }}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Climate Insights. All rights reserved.</p>
+    </footer>
+</body>
+</html>
