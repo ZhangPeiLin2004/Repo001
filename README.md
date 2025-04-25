@@ -1,5 +1,8 @@
 Semester Plans:
 
+Personal Goals:
+  
+
 Individual Assignments:
   Literature Review:
     Current status: Completed; Reviewing
@@ -7,7 +10,7 @@ Individual Assignments:
     Grammar errors fix: Complete
     See file in Repository
   Individual Informative Website:
-    Front-end design: NOT COMPLETE, planned to work on April 12, 13, 14, 15 to fix
+    Front-end design: COMPLETE
     Back-end design: NOT STARTED, but started filtering the data.
 
 Group Assignment: 
