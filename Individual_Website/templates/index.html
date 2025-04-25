@@ -2,28 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Change Awareness</title>
+    <title>Climate Impact & Household Energy</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('data') }}">Data & Visualizations</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>Climate Change: The Urgent Crisis</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/data">Data & Visuals</a>
-            <a href="/causes">Causes & Effects</a>
-            <a href="/solutions">Solutions</a>
-        </nav>
+        <h1>Understanding Climate Change Through Household Energy Use</h1>
+        <p>Explore how everyday energy habits in developed countries impact the planet—and how digital tools can inspire change.</p>
     </header>
-    
-    <section>
-        <h2>Why Does Climate Change Matter?</h2>
-        <p>Global temperatures are rising at an unprecedented rate.</p>
-    </section>
+
+    <main>
+        <section class="intro">
+            <h2>Why Household Energy Matters</h2>
+            <p>
+                Household energy consumption is a significant contributor to global greenhouse gas (GHG) emissions, 
+                playing a crucial role in climate change. Residential energy use accounts for approximately 17% of 
+                global CO₂ emissions when considering both direct energy use (e.g., heating, cooling, and electricity) 
+                and indirect emissions from the production of goods and services consumed by households (IEA, 2021). 
+                As urbanization and living standards rise, household energy demand is expected to grow, making sustainable 
+                energy practices essential for mitigating climate change.
+            </p>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Explore the Data</h2>
+            <p>Head to the Data page to view interactive graphs and learn what your daily habits mean for the climate.</p>
+            <a href="{{ url_for('data') }}" class="button">View Data</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Climate Awareness</p>
+        <p>&copy; 2025 Climate Insights. Built for educational purposes.</p>
     </footer>
 </body>
 </html>
