@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Climate Impact & Household Energy</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5747Z2KGV8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5747Z2KGV8');
+</script>
+
+<body>
+    <main>
+<!-- ################################################################################################################-->
+<!-- Navigation -->
+<!-- ############################################################################################################### -->
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('data') }}">Data & Visualizations</a></li>
+            </ul>
+        </nav>
+
+<!-- ################################################################################################################-->
+<!-- Swiper Section -->
+<!-- ############################################################################################################### -->
+        <div class="swiper-container hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 - Intro -->
+                <div class="swiper-slide hero-slide intro-slide">
+                    <img src="{{ url_for('static', filename='cc_image/landfire.png') }}" alt="Landfire image">
+                    <div class="slide-content">
+                        <h1>Understanding Climate Change</h1>
+                        <p>Modern climate change encompasses not only global warming but also its broader impacts on Earth's climate patterns.</p>
+                    </div>
+
+                </div>
+                
+                <!-- Slide 2 - Terminology -->
+                <div class="swiper-slide hero-slide terminology-slide">
+                    <img src="{{ url_for('static', filename='cc_image/droplet-earth.png') }}" alt="Climate terminology concepts">
+                    <div class="dark overlay"></div>
+                    <div class="slide-content">
+                        <h1>Terminology of Climate Change</h1>
+                        <p>Learn how scientific understanding of climate change has evolved over time.</p>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!--Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper
+            const swiper = new Swiper('.hero-swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: 'slide',
+                speed: 800,
+                
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+
+<!-- ################################################################################################################-->
+<!-- Flipcard Section -->
+<!-- ############################################################################################################### -->
+        <section class="climate-section">
+            <h2>Understanding Climate Change</h2>
+            <div class="flipbox-container">
+                <div class="flipbox">
+                    <div class="flipbox-inner">
+                        <div class="flipbox-front">
+                            <img src="{{ url_for('static', filename='cc_image/landfire.png') }}" alt="Heatwaves">
+                            <h3>Heatwaves</h3>
+                        </div>
+                        <div class="flipbox-back">
+                            <p>Intense heatwaves are becoming more frequent, posing health risks and straining energy systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flipbox">
+                    <div class="flipbox-inner">
+                        <div class="flipbox-front">
+                            <img src="{{ url_for('static', filename='cc_image/drought.png') }}" alt="drought">
+                            <h3>Drought</h3>
+                        </div>
+                        <div class="flipbox-back">
+                            <p>Dry conditions and heat are fueling larger, more destructive wildfires across the globe. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flipbox">
+                    <div class="flipbox-inner">
+                        <div class="flipbox-front">
+                            <img src="{{ url_for('static', filename='cc_image/ice-whale.png') }}" alt="ice-whale">
+                            <h3>Sea levels</h3>
+                        </div>
+                        <div class="flipbox-back">
+                            <p>Rising sea levels and extreme rainfall increase the risk of devastating floods in vulnerable areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ################################################################################################################-->
+<!-- Timescale Section -->
+<!-- ############################################################################################################### -->
+        <section class="spiral-timeline">
+            <h2>Climate Events Timeline</h2>
+            <div class="spiral-container">
+                <div class="spiral-scale-wrapper">
+                    <svg id="spiral-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(300,300)" id="spiral-group"></g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <script>
+        // Generate spiral path and event markers
+        const spiralGroup = document.getElementById("spiral-group");
+
+        const spiralPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        let pathData = "M0,0";
+        const a = 6;   // starting radius
+        const b = 10;   // growth factor
+        const turns = 3; // spiral turns
+        const steps = 400;
+
+        for (let i = 0; i <= steps; i++) {
+            const theta = (i / steps) * (Math.PI * 2 * turns);
+            const r = a + b * theta;
+            const x = r * Math.cos(theta);
+            const y = r * Math.sin(theta);
+            pathData += ` L${x.toFixed(2)},${y.toFixed(2)}`;
+        }
+
+        spiralPath.setAttribute("d", pathData);
+        spiralPath.setAttribute("stroke", "#1f4e79");
+        spiralPath.setAttribute("fill", "none");
+        spiralPath.setAttribute("stroke-width", "2");
+        spiralGroup.appendChild(spiralPath);
+
+        // Climate events with year and label
+        const events = [
+            { year: "1896", label: "Arrhenius Predicts Global Warming", index: 90 },
+            { year: "1958", label: "Keeling Curve Begins", index: 160 },
+            { year: "1979", label: "First World Climate Conference", index: 200 },
+            { year: "1988", label: "IPCC Established", index: 240 },
+            { year: "1997", label: "Kyoto Protocol", index: 300 },
+            { year: "2015", label: "Paris Agreement", index: 370 },
+            { year: "2018", label: "IPCC Report", index: 400 },
+        ];
+
+
+        events.forEach((event, i) => {
+            const theta = (event.index / steps) * (Math.PI * 2 * turns);
+            const r = a + b * theta;
+            const x = r * Math.cos(theta);
+            const y = r * Math.sin(theta);
+
+            // Plot dot
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", x);
+            circle.setAttribute("cy", y);
+            circle.setAttribute("r", 5);
+            circle.setAttribute("fill", "#e63946");
+            spiralGroup.appendChild(circle);
+
+            // Better label placement
+            const labelDistance = 60 + (i % 2) * 20; // vary distance to prevent collisions
+            const labelAngle = theta + (i % 5 - 2) * (Math.PI / 8); // fan from -π/4 to π/4
+
+            const tx = x + labelDistance * Math.cos(labelAngle);
+            const ty = y + labelDistance * Math.sin(labelAngle);
+
+            // Label text
+            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute("x", tx);
+            text.setAttribute("y", ty);
+            text.setAttribute("font-size", "12");
+            text.setAttribute("fill", "#333");
+            text.setAttribute("text-anchor", "middle");
+            text.setAttribute("alignment-baseline", "middle");
+            text.textContent = `${event.year}: ${event.label}`;
+            spiralGroup.appendChild(text);
+
+            // Connector
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", x);
+            line.setAttribute("y1", y);
+            line.setAttribute("x2", tx);
+            line.setAttribute("y2", ty);
+            line.setAttribute("stroke", "#aaa");
+            line.setAttribute("stroke-dasharray", "2,2");
+            spiralGroup.appendChild(line);
+        });
+        </script>
+
+<!-- ################################################################################################################-->
+<!-- Illustration Section -->
+<!-- ############################################################################################################### -->
+        <section class="temperature-illustrations">
+            <h2>Continental Temperature Illustrations</h2>
+            <div class="card-container">
+
+                <div class="temp-card">
+                    <h3>Africa</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/Africa-climate-stripes.png') }}" alt="Africa Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/Africa-temperature-chart.png') }}" alt="Africa Temperature Chart">
+                    </div>
+                    <p class="card-description">~+1.3°C warming since 1970; Gradual rise until 1970s, then steady acceleration. Clear long-term warming with reduced variability over time.</p>
+                </div>
+
+                <div class="temp-card">
+                    <h3>Antarctica</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/Antarctica-climate-stripes.png') }}" alt="Antarctica Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/Antarctica-temperature-chart.png') }}" alt="Antarctica Temperature Chart">
+                    </div>
+                    <p class="card-description">~+1.0°C warming, high variability; Irregular pattern with large fluctuations. Modest warming overall, especially post-1980. Uncertainty remains high.</p>
+                </div>
+
+                <div class="temp-card">
+                    <h3>Asia</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/Asia-climate-stripes.png') }}" alt="Antarctica Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/Asia-temperature-chart.png') }}" alt="Antarctica Temperature Chart">
+                    </div>
+                    <p class="card-description">~+2.1°C warming since 1970; Stable until 1970s, followed by consistent rise. Strongest warming compared to Africa and Antarctica, likely tied to industrial growth.</p>
+                </div>
+                
+                <div class="temp-card">
+                    <h3>Europe</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/Europe-climate-stripes.png') }}" alt="Antarctica Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/Europe-temperature-chart.png') }}" alt="Antarctica Temperature Chart">
+                    </div>
+                    <p class="card-description">~+1.75°C warming since 1970; Sharp and irregular fluctuations in 12-month moving average, however an upward growth is always maintained.</p>
+                </div>
+
+                <div class="temp-card">
+                    <h3>North America</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/North America-climate-stripes.png') }}" alt="Antarctica Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/North America-temperature-chart.png') }}" alt="Antarctica Temperature Chart">
+                    </div>
+                    <p class="card-description">~-2.0°C temperature fluctuation; North America has a decline from 1940 to 1970. North America's temperature increase relate to almost ALL Industial Revolutions.</p>
+                </div>
+
+                <div class="temp-card">
+                    <h3>South America</h3>
+                    <div class="card-images">
+                        <img src="{{ url_for('static', filename='cc_image/South America-climate-stripes.png') }}" alt="Antarctica Climate Stripes">
+                        <img src="{{ url_for('static', filename='cc_image/South America-temperature-chart.png') }}" alt="Antarctica Temperature Chart">
+                    </div>
+                    <p class="card-description">~+1.75°C warming since 1920; Gradual rise and steady acceleration except for the decline from 1945-1946. Clear long-term warming with reduced variability.</p>
+                </div>
+
+            </div>
+
+            <div class="citation">
+                <h3>Data Sources</h3>
+                <ul>
+                    <li><a href="https://berkeleyearth.org/temperature-region/asia#">Asia - Berkeley Earth</a></li>
+                    <li><a href="https://berkeleyearth.org/temperature-region/africa#">Africa - Berkeley Earth</a></li>
+                    <li><a href="https://berkeleyearth.org/temperature-region/antarctica#">Antarctica - Berkeley Earth</a></li>
+                    <li><a href="https://berkeleyearth.org/temperature-region/europe#">Europe - Berkeley Earth</a></li>
+                    <li><a href="https://berkeleyearth.org/temperature-region/north-america#">North America - Berkeley Earth</a></li>
+                    <li><a href="https://berkeleyearth.org/temperature-region/south-america#">South America - Berkeley Earth</a></li>
+                </ul>
+            </div>
+
+            <p><a href="{{ url_for('data') }}">Click here to look for temperature changes in every COUNTRY, as well as climate anomalies.</a></p>
+        </section>
+
+
+<!-- ################################################################################################################-->
+<!-- Solutions Section -->
+<!-- ############################################################################################################### -->
+        <section class="climate-solutions">
+            <h2 class="solutions-title">Climate Solutions</h2>
+            <div class="solution-cards">
+                <div class="solution-card">
+                <h3>Individual Actions</h3>
+                <ul>
+                    <li>Switch to energy-efficient appliances and LED lighting</li>
+                    <li>Limit air travel or offset your carbon footprint</li>
+                    <li>Support sustainable brands and avoid fast fashion</li>
+                    <li>Reduce waste and recycle</li>
+                    <li>Educate others about climate change and solutions</li>
+                </ul>
+                </div>
+                <div class="solution-card">
+                <h3>Community Initiatives</h3>
+                <ul>
+                    <li>Organize neighborhood tree planting events</li>
+                    <li>Establish community composting and recycling centers</li>
+                    <li>Develop community solar or energy co-ops</li>
+                    <li>Collaborate with schools to include sustainability education</li>
+                    <li>Support local farmers markets and sustainable food programs</li>
+                </ul>
+                </div>
+                <div class="solution-card">
+                <h3>Global Policies</h3>
+                <ul>
+                    <li>Enforce international carbon pricing agreements</li>
+                    <li>Phase out fossil fuel subsidies globally</li>
+                    <li>Fund climate adaptation and resilience in vulnerable regions</li>
+                    <li>Promote sustainable development through global finance reforms</li>
+                    <li>Establish global deforestation-free trade policies</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+<!-- ################################################################################################################-->
+<!-- End-of-Page Section -->
+<!-- ############################################################################################################### -->
+        <footer>
+            <p>&copy; 2025 Climate Insights | Peilin Zhang</p>
+        </footer>
+    </main>
+</body>
+</html>

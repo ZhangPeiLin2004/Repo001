@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Climate & Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5747Z2KGV8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5747Z2KGV8');
+</script>
+
+<body>
+<!-- ################################################################################################################-->
+<!-- Navigation -->
+<!-- ############################################################################################################### -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('data') }}">Data & Visualizations</a></li>
+        </ul>
+    </nav>
+
+<!-- ################################################################################################################-->
+<!-- Main Content -->
+<!-- ############################################################################################################### -->
+    <main>
+        <section class="about-section">
+            <h1>About This Project</h1>
+            <p>This website presents data on climate change to enhance understanding of our planet's changing environment and the pressing need for immediate action. Our aim is to make climate science understandable and motivate meaningful action, from personal decisions to global policy reforms. Three theories are utilized in designing this website:</p>
+            <ul>
+                <li><strong>Theory of Planned Behavior (TPB)</strong> – understanding the role of intentions, attitudes, and perceived control in shaping behavior.</li>
+                <li><strong>Nudge Theory</strong> – influencing choices through subtle cues and interface design.</li>
+                <li><strong>Social Practice Theory (SPT)</strong> – focusing on routines, culture, and material context behind everyday energy usage.</li>
+            </ul>
+
+            <p>The data presented is based on publicly available datasets, which have been cleaned, structured into a relational database, and analyzed to provide interactive visualizations.</p>
+            <p>This project is built using Python Flask, and integrates user-tracking functionality to explore how visitors engage with climate-related information online.</p>
+        </section>
+    </main>
+
+<!-- ################################################################################################################-->
+<!-- Footer -->
+<!-- ############################################################################################################### -->
+    <footer>
+        <p>&copy; 2025 Climate Insights | Peilin Zhang</p>
+    </footer>
+</body>
+</html>

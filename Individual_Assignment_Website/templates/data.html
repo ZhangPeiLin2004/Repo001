@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data | Climate & Energy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='data.css') }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5747Z2KGV8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5747Z2KGV8', { 'debug_mode': true });
+    </script>
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+
+<body>
+<!-- ################################################################################################################-->
+<!-- Navigation -->
+<!-- ############################################################################################################### -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('data') }}">Data & Visualizations</a></li>
+        </ul>
+    </nav>
+
+<!-- ################################################################################################################-->
+<!-- Data graph -->
+<!-- ############################################################################################################### -->
+    <main>
+        <section class="intro">
+            <h1>Temperature Change by Country</h1>
+            <p>Select a country to explore annual temperature changes (1961–2024).</p>
+        </section>
+
+        <section class="form-section">
+            <form method="POST">
+                <select name="country" id="country-select">
+                    {% for country in countries %}
+                        <option value="{{ country }}" {% if country == selected %}selected{% endif %}>{{ country }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Show" id="show-button">
+            </form>
+        </section>
+
+<!-- ################################################################################################################-->
+<!-- Data Summary -->
+<!-- ############################################################################################################### -->
+        <section class="data-summary-block">
+            <h2>Global Temperature Trends</h2>
+            <div class="data-card">
+                <div class="graph-container">
+                    {{ graph | safe }}
+                    <p class="plot-caption">Global temperature anomalies from pre-industrial baseline (1850–1900)</p>
+                </div>
+
+                <div class="interpretation">
+                    <h3>Key Insights:</h3>
+                    <ul>
+                        <li>Global Temperature Rise: The data shows a clear upward trend in surface temperature changes across most countries from 1961 to 2024, with significant increases in recent decades. For example, Afghanistan's temperature change rose from -0.096°C in 1961 to 2.188°C in 2023.</li>
+                        <li>Regional Variations: Some regions, like Europe and Asia, exhibit more pronounced temperature increases compared to others. For instance, Austria's temperature change surged from 1.031°C in 1961 to 3.267°C in 2024, while Africa's increase was more gradual but still notable.</li>
+                        <li>Recent Acceleration: The years from 2010 onwards show sharper rises in temperature changes globally. Countries like Canada experienced a dramatic jump from 1.315°C in 2010 to 3.366°C in 2024, highlighting the accelerating pace of climate change.</li>
+                    </ul>
+
+                    <h3>Implications:</h3>
+                    <ul>
+                        <li>Environmental Impact: The rising temperatures could lead to more frequent and severe weather events, such as heatwaves, droughts, and storms, affecting ecosystems and biodiversity.</li>
+                        <li>Agricultural Challenges: Higher temperatures may disrupt agricultural productivity, particularly in regions already vulnerable to climate variability, threatening food security and livelihoods.</li>
+                        <li>Policy Urgency: The data underscores the need for immediate and coordinated global action to mitigate climate change through reduced emissions, sustainable practices, and adaptation strategies to protect vulnerable populations.</li>
+                    </ul>
+
+                    <h3>Sources:</h3>
+                    <ul class="sources">
+                        <li><a href="https://climatedata.imf.org/datasets/4063314923d74187be9596f10d034914/explore">International Monetary Fund. (n.d.). Climate Change Indicators Dashboard. IMF Climate Change Indicators Dashboard.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+<!-- ################################################################################################################-->
+<!-- Anomaly Plot & Data Summary -->
+<!-- ############################################################################################################### -->
+        <section class="data-summary-block">
+            <h2>Global Land and Ocean Temperature Anomalies</h2>
+            <div class="data-card">
+                <div class="graph-container">
+                    {{ graph_new | safe }}
+                    <p class="plot-caption">Global land and ocean temperature anomalies (Base Period: 1901–2000)</p>
+                </div>
+
+                <div class="interpretation">
+                    <h3>Key Insights:</h3>
+                    <ul>
+                        <li>Gradual Increase Over Time: From the 1940s to the early 1980s, anomalies fluctuated around 0°C, sometimes dipping into negative values. However, post-1980s, there is a noticeable upward trend, with anomalies consistently positive and increasing into the 0.3–0.5°C range.</li>
+                        <li>Volatility in Early Decades: The 1940s through the 1970s show considerable short-term fluctuations in monthly anomalies, including frequent dips below 0°C, suggesting higher climate variability or less pronounced warming during that period.</li>
+                        <li>Emergence of Sustained Warming Trend: Starting in the late 1970s and especially the 1980s, there's a clear shift to sustained warming with anomalies staying above the base period average, indicating the onset of modern global warming.</li>
+                    </ul>
+
+                    <h3>Implications:</h3>
+                    <ul>
+                        <li>Evidence of Anthropogenic Climate Change: The rising temperature anomalies align with increased industrial activity and greenhouse gas emissions, supporting the consensus that human activity is contributing significantly to global warming.</li>
+                        <li>Need for Policy Action: The consistent warming trend, particularly post-1980, underscores the urgency for global policy responses to mitigate climate change and its impacts.</li>
+                        <li>Environmental and Societal Risk: Continued warming may lead to more frequent extreme weather events, sea level rise, and biodiversity loss, all of which could affect agriculture, health, and global economies.</li>
+                    </ul>
+
+                    <h3>Sources:</h3>
+                    <ul class="sources">
+                        <li><a href="https://climate.nasa.gov/vital-signs/global-temperature/?intent=121">NASA Global Climate Change (2023), Global Temperature Anomalies.</a></li>
+                        <li><a href="https://www.ncei.noaa.gov/access/monitoring/global-temperature-anomalies/anomalies">NOAA NCEI (2023), Land and Ocean Temperature Anomalies.</a></li>
+                        <li><a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">IPCC (2023), Climate Change 2023.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<!-- ################################################################################################################-->
+<!-- Footer -->
+<!-- ############################################################################################################### -->
+    <footer>
+        <p>&copy; 2025 Climate Insights | Peilin Zhang</p>
+    </footer>
+
+    <script>
+        const showButton = document.getElementById("show-button");
+        const countrySelector = document.getElementById("country-select");
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const selectedCountry = countrySelector.value;
+
+            setTimeout(() => {
+                gtag('event', 'country_data_viewed', {
+                    event_category: 'Interaction',
+                    event_label: selectedCountry,
+                    value: 1
+                });
+                form.submit();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Reset basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffdf8;
+    color: #333;
+    padding: 20px;
+    line-height: 1.7;
+}
+
+main {
+    padding-top: 100px;
+}
+
+/*#############################################################################################*/
+/* Navigation */
+/*#############################################################################################*/
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(31, 80, 118, 0.6); /* semi-transparent blue */
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*#############################################################################################*/
+/* About */
+/*#############################################################################################*/
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1f4e79;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+}
+
+/*#############################################################################################*/
+/* Footer */
+/*#############################################################################################*/
+footer {
+    background-color: #1f4e79;
+    color: white;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: auto;
+}
