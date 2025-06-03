@@ -17,17 +17,17 @@ Track your ongoing, planned, and completed projects here.
 | Task Description                          | Status | Due Date     |
 |------------------------------------------|--------|--------------|
 | Set up repository                        | ✅     | 2025-02-10   |
-| Design webpage                           | ✅     | 2025-03-05   |
-| Implement index homepage (with CSS)      | ✅     | 2025-03-09   |
-| Submit Progress Check Part A             | ✅     | 2025-03-14   |
-| Add about page (with CSS)                | ✅     | 2025-04-05   |
-| Add data page (with CSS)                 | ✅     | 2025-03-20   |
-| Local tryout                             | ✅     | 2025-04-10   |
-| Submit Progress Check Part B             | ✅     | 2025-04-17   |
-| Host on PythonAnywhere                   | ✅     | 2025-05-11   |
-| Data Tracking on Analytics               | ✅     | 2025-05-14   |
-| Walk-in Progress Check Part C            | ✅     | 2025-05-12   |
-| Final Submission                         | ✅     | 2025-05-16   |
+| Design webpage                           | ✅     | 2025-03-05   | Look for webpages that seem pleasing
+| Implement index homepage (with CSS)      | ✅     | 2025-03-09   | Setup index page, have basic ideas of what to continue next; No idea on descriptive part
+| Submit Progress Check Part A             | ✅     | 2025-03-14   | Submitted
+| Add about page (with CSS)                | ✅     | 2025-04-05   | Basic description
+| Add data page (with CSS)                 | ✅     | 2025-03-20   | Used dataset from Berkeley data and Climate data; DID NOT COMPLETE DATAFRAME STEP
+| Local tryout                             | ✅     | 2025-04-10   | Successful, but has no idea on what to track in future
+| Submit Progress Check Part B             | ✅     | 2025-04-17   | Submitted
+| Host on PythonAnywhere                   | ✅     | 2025-05-11   | Successful, but too late
+| Data Tracking on Analytics               | ✅     | 2025-05-14   | Added custom event to track user behavior
+| Walk-in Progress Check Part C            | ✅     | 2025-05-12   | Submitted
+| Final Submission                         | ✅     | 2025-05-16   | Submitted
 
 ---
 
@@ -38,11 +38,11 @@ Track your ongoing, planned, and completed projects here.
 
 | Task Description                              | Status | Due Date     |
 |----------------------------------------------|--------|--------------|
-| Structure logic                               | ✅     | 2025-02-18   |
-| Look for theoretical background info          | ✅     | 2025-02-24   |
-| Complete article                              | ✅     | 2025-03-08   |
-| Submit Progress Check for Lit. Review         | ❌     | 2025-04-01   |
-| Final submission for Lit. Review              | ✅     | 2025-04-11   |
+| Structure logic                               | ✅     | 2025-02-18   | Form basic ideas of how literature work is about by reading thru assignment
+| Look for theoretical background info          | ✅     | 2025-02-24   | Search for theories to apply for the literature review
+| Complete article                              | ✅     | 2025-03-08   | Completed article
+| Submit Progress Check for Lit. Review         | ❌     | 2025-04-01   | INCOMPLETE
+| Final submission for Lit. Review              | ✅     | 2025-04-11   | Submitted
 
 ---
 
@@ -55,14 +55,14 @@ Track your ongoing, planned, and completed projects here.
 | Task Description                              | Status | Due Date     |
 |----------------------------------------------|--------|--------------|
 | Read through assignment                       | ✅     | 2025-03-20   |
-| Complete Task 1                               | ✅     | 2025-04-01   |
-| Submit Progress Check for Task 1              | ✅     | 2025-04-07   |
-| Complete Task 2                               | ✅     | 2025-04-08   |
-| Submit Progress Check for Task 2              | ✅     | 2025-04-25   |
-| Final Submission for Task 1&2                 | ✅     | 2025-05-09   |
-| Revise Task 1                                 | ✅     | 2025-05-14   |
-| Revise Task 2                                 | ✅     | 2025-05-21   |
-| Explainer                                     | ✅     | 2025-05-28   |
+| Complete Task 1                               | ✅     | 2025-04-01   | Checked up regression model; revised OLS, correlation coefficient; didb't lookup implications
+| Submit Progress Check for Task 1              | ✅     | 2025-04-07   | Submitted
+| Complete Task 2                               | ✅     | 2025-04-08   | T-test and Chi-square testings completed; revised concept of p-value
+| Submit Progress Check for Task 2              | ✅     | 2025-04-25   | Submitted
+| Final Submission for Task 1&2                 | ✅     | 2025-05-09   | Submitted
+| Revise Task 1                                 | ✅     | 2025-05-14   | Lookup implications of regression model, understood chart diagram terms
+| Revise Task 2                                 | ✅     | 2025-05-21   | Go through significance of two tests
+| Explainer                                     | ✅     | 2025-05-28   | MISSED 2 parts of indications of OLS
 
 ---
 
