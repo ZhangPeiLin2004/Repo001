@@ -68,7 +68,7 @@ Track your ongoing, planned, and completed projects here.
 ---
 
 ## 🚀 Project: CME Project Management  
-**Status:** ⏳ In Progress  
+**Status:** ✅ Completed  
 **Start Date:** 2025-02-14  
 **Deadline:** 2025-06-05  
 
@@ -78,5 +78,5 @@ Track your ongoing, planned, and completed projects here.
 | Update file upload                            | ✅     | 2025-06-05   | Updated personal assignment files |
 | Update time                                   | ✅     | 2025-06-05   | Time update in sub-goals |
 | Progress Check (D)                            | ❌     | 2025-06-05   | INCOMPLETE       |
-| Report                                        | ✅     | 2025-06-05   |                  |
-| Final Submission                              | ✅     | 2025-06-05   |                  |
+| Report                                        | ✅     | 2025-06-05   | Submitted        |
+| Final Submission                              | ✅     | 2025-06-05   | Submitted        |
