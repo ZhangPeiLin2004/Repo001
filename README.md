@@ -1,24 +1,50 @@
-Semester Plans:
 
-Personal Goals:
-  
+# 📘 Repo001: Personal & Academic Project Tracker
 
-Individual Assignments:
-  Literature Review:
-    Current status: Completed; Reviewing
-    Citations: Complete
-    Grammar errors fix: Complete
-    See file in Repository
-  Individual Informative Website:
-    Front-end design: COMPLETE
-    Back-end design: NOT STARTED, but started filtering the data.
+This repository collects all major individual assignments and project tracking documents in one place.
 
-Group Assignment: 
-  See Project Tracker in Google Docs for detailed info:
-    https://docs.google.com/document/d/1B9G2gTsVGpPC94uvw376vQrOcw4dPKSkzfGd2L-mcoY/edit?tab=t.eoyguu72bfu1
-  Current progress: WG8
-  Individual Efforts to do:
-    Make Duty of Care page
-    Improve Toolbox Page
-    Create .js files to connect backend logic
-NOTE: UPDATE PROJECT TRACKER
+---
+
+## 📁 Repository Contents
+
+| File / Folder                  | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `Individual_Assignment_Website/` | Code and files for a personal web project using HTML/CSS/JS/Python Flask.|
+| `Statistics_Portfolio/`         | Statistical analysis and writeups for course-related tasks.               |
+| `Literature_Review.pdf`         | Final version of the Literature Review paper.                             |
+| `Personal_Projects_Tracker.md`  | My markdown-based project management system with timelines and notes.     |
+| `Reflection.pdf`                | End-of-semester reflection on my use of project management techniques.    |
+| `README.md`                     | This file — overview of the repository.                                   |
+
+---
+
+## 🎯 Purpose
+
+This repository demonstrates:
+- Markdown-based personal project tracking
+- Individual assignment progress documentation
+- Final submissions in structured, version-controlled format
+
+It serves both as a **portfolio** of my academic work and a **reflection** on my time/project management practices using GitHub.
+
+---
+
+## 🧠 Highlights
+
+- ✅ Markdown-based tracker (`Personal_Projects_Tracker.md`) includes:
+  - Project start/end dates
+  - Task checklists with due dates
+  - Completion notes for future reference
+- ✅ Final submissions are organized and timestamped
+- ✅ Git is used to track progress and update logs
+
+---
+
+## 🔗 Quick Access
+
+- 📊 View tracker: [Personal_Projects_Tracker.md](./Personal_Projects_Tracker.md)  
+- 🧾 Read reflection: [Reflection.pdf](./Reflection.pdf)
+
+
+GitHub folder:  
+👉 [https://github.com/ZhangPeiLin2004/Repo001/tree/main](https://github.com/ZhangPeiLin2004/Repo001/tree/main)
