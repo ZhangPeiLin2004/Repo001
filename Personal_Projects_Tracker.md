@@ -75,8 +75,8 @@ Track your ongoing, planned, and completed projects here.
 | Task Description                              | Status | Due Date     | Completion Notes |
 |----------------------------------------------|--------|--------------|------------------|
 | Create Repository                             | ✅     | 2025-03-20   |                  |
-| Update file upload                            | ✅     | 2025-06-05   | Updated personal assignment files |
-| Update time                                   | ✅     | 2025-06-05   | Time update in sub-goals |
+| Update file upload                            | ✅     | 2025-05-05   | Updated personal assignment files |
+| Update time                                   | ✅     | 2025-05-25   | Time update in sub-goals |
 | Progress Check (D)                            | ❌     | 2025-06-05   | INCOMPLETE       |
 | Report                                        | ✅     | 2025-06-05   | Submitted        |
 | Final Submission                              | ✅     | 2025-06-05   | Submitted        |
